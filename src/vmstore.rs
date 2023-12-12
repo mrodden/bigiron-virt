@@ -94,6 +94,8 @@ mod imgutil {
         if let Some(bf) = backing_file {
             cmd.arg("-b");
             cmd.arg(bf.as_ref());
+            cmd.arg("-F");
+            cmd.arg("qcow2");
         }
 
         cmd.arg("-f");
